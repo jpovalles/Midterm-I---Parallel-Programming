@@ -38,10 +38,10 @@ void* funcionC(void* arg) {
     finCpuC = clock();
     finReC = time(NULL);
     int limSuperior = rand() % UPPERBOUND;
-    long long int ans = 1;
+    long long int ans = 10;
     int i;
-    for(i = 1; i<limSuperior; i++){
-        ans *= i;
+    for(i = 0; i<limSuperior; i++){
+        if(i % 2 == 0) ans += 1;
     }
     printf("Funcion C terminada. El resultado es %lld\n", ans);
     return NULL;
